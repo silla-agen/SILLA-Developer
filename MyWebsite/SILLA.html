@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Silla Agen – Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* GENERAL STYLING */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #f4f6f9, #dbe9f7);
+            color: #333;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        /* PROFILE IMAGE */
+        img.profile {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #3498db;
+            margin-top: 20px;
+        }
+
+        /* INFO SECTION */
+        .info {
+            margin-top: 25px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .info p {
+            margin: 8px 0;
+        }
+
+        /* BIOGRAPHY SECTION */
+        .bio {
+            max-width: 700px;
+            margin: 25px auto;
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            text-align: justify;
+            padding: 0 15px;
+        }
+
+        /* SKILLS SECTION */
+        .skills {
+            margin: 30px 0;
+        }
+
+        .skills span {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* BUTTON */
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 50px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .bio {
+                font-size: 14px;
+            }
+            button {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Silla Agen Mwakaje</h1>
+
+    <!-- PROFILE PICTURE -->
+    <img src="silla.jpg" alt="Silla Photo" class="profile">
+
+    <!-- PERSONAL INFO -->
+    <div class="info">
+        <p><strong>Age:</strong> 22</p>
+        <p><strong>Birth Place:</strong> Dar es Salaam, Tanzania</p>
+        <p><strong>Current Living:</strong> Dar es Salaam</p>
+        <p><strong>Profession:</strong> Mechatronics Engineering Student</p>
+    </div>
+
+    <!-- BIOGRAPHY -->
+    <div class="bio">
+        <p>
+            welcome to my official website my name is Silla Agen Mwakaje, a passionate Mechatronics Engineering student from Dar es Salaam, Tanzania.  
+            I love exploring technology, building innovative projects, and sharing knowledge with the world.  
+            My journey in tech and engineering has been exciting, and I aim to create solutions that make life easier and smarter.
+            . 
+        </p>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>Embedded Systems</span>
+    </div>
+
+    <!-- BUTTON -->
+    <button onclick="alert('Thank you for visiting my portfolio!')">Say Hello 👋</button>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Silla Agen Portfolio</p>
+    </footer>
+
+</body>
+</html>
