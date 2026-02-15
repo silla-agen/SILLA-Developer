@@ -1,163 +1,232 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!-- Google Verification -->
-    <meta name="google-site-verification" content="1oZt91UHBfD8UAxdpHZk1EI2n6ISdsh-hHM2H5WWq_8" />
+    <!-- SEO -->
+    <meta name="description" content="Silla Agen Mwakaje - Mechatronics Engineering student and web developer from Tanzania. Explore projects, skills and portfolio.">
+    <meta name="keywords" content="Silla Agen, Developer, Portfolio, Tanzania, Mechatronics, Web Developer">
+    <meta name="author" content="Silla Agen Mwakaje">
 
-    <!-- SEO META TAGS -->
-    <meta name="description" content="Silla Agen personal developer portfolio. Biography, skills, and projects.">
-    <meta name="keywords" content="Silla Agen, developer, portfolio, Tanzania, web developer, Mechatronics">
-    <meta name="author" content="Silla Agen">
-    <title>Silla Agen - Portfolio</title>
+    <title>Silla Agen | Portfolio</title>
 
     <style>
-        /* GENERAL STYLING */
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to bottom right, #f4f6f9, #dbe9f7);
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            transition: 0.4s;
+        }
+
+        body.light-mode {
+            background: #f4f6f9;
             color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            background: rgba(0,0,0,0.6);
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .toggle-btn {
+            position: absolute;
+            right: 20px;
+            top: 18px;
+            cursor: pointer;
+            font-size: 14px;
+            background: #38bdf8;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+
+        section {
+            padding: 70px 20px;
+            max-width: 900px;
+            margin: auto;
             text-align: center;
-            padding: 30px 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        .hero img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #38bdf8;
+            margin-bottom: 20px;
         }
 
         h1 {
-            margin-bottom: 15px;
-            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 10px;
         }
 
-        /* PROFILE IMAGE */
-        img.profile {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #3498db;
-            margin-top: 20px;
-        }
-
-        /* INFO SECTION */
-        .info {
-            margin-top: 25px;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .info p {
-            margin: 8px 0;
-        }
-
-        /* BIOGRAPHY SECTION */
-        .bio {
-            max-width: 700px;
-            margin: 25px auto;
-            font-size: 16px;
-            color: #555;
-            line-height: 1.8;
-            text-align: justify;
-            padding: 0 15px;
-        }
-
-        /* SKILLS SECTION */
-        .skills {
-            margin: 30px 0;
+        h2 {
+            margin-bottom: 25px;
+            color: #38bdf8;
         }
 
         .skills span {
             display: inline-block;
-            background-color: #3498db;
-            color: white;
+            background: #38bdf8;
+            color: black;
             padding: 8px 15px;
             margin: 5px;
             border-radius: 20px;
             font-size: 14px;
         }
 
-        /* BUTTON */
-        button {
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: 0.3s;
+        .project-box {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
         }
 
-        button:hover {
-            background-color: #2980b9;
+        body.light-mode .project-box {
+            background: white;
         }
 
-        /* FOOTER */
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #38bdf8;
+            color: black;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .social a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
         footer {
-            margin-top: 50px;
-            background-color: #2c3e50;
-            color: white;
-            padding: 15px;
+            padding: 20px;
+            text-align: center;
+            background: black;
+            margin-top: 40px;
         }
 
-        /* RESPONSIVE */
-        @media (max-width: 600px) {
-            .bio {
-                font-size: 14px;
-            }
-            button {
-                width: 80%;
-            }
+        @media(max-width:600px){
+            h1 {font-size: 24px;}
         }
     </style>
 </head>
 <body>
 
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="toggle-btn" onclick="toggleMode()">Toggle Mode</button>
+</nav>
+
+<section class="hero">
+    <img src="silla.jpg" alt="Silla Agen">
     <h1>Silla Agen Mwakaje</h1>
+    <p>Mechatronics Engineering Student | Web Developer</p>
+    <a href="#" class="btn">Download CV</a>
+</section>
 
-    <!-- PROFILE PICTURE -->
-    <img src="silla.jpg" alt="Silla Photo" class="profile">
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate Mechatronics Engineering student from Dar es Salaam, Tanzania.
+        I build smart systems, robotics projects and modern web applications.
+        My mission is to combine engineering and software to create impactful solutions.
+    </p>
+</section>
 
-    <!-- PERSONAL INFO -->
-    <div class="info">
-        <p><strong>Age:</strong> 22</p>
-        <p><strong>Birth Place:</strong> Dar es Salaam, Tanzania</p>
-        <p><strong>Current Living:</strong> Dar es Salaam</p>
-        <p><strong>Profession:</strong> Mechatronics Engineering Student</p>
-    </div>
-
-    <!-- BIOGRAPHY -->
-    <div class="bio">
-        <p>
-            Welcome to my official website! My name is Silla Agen Mwakaje, a passionate Mechatronics Engineering student from Dar es Salaam, Tanzania.  
-            I love exploring technology, building innovative projects, and sharing knowledge with the world.  
-            My journey in tech and engineering has been exciting, and I aim to create solutions that make life easier and smarter.
-        </p>
-    </div>
-
-    <!-- SKILLS -->
+<section id="skills">
+    <h2>Skills</h2>
     <div class="skills">
         <span>HTML</span>
         <span>CSS</span>
         <span>JavaScript</span>
         <span>Python</span>
+        <span>Arduino</span>
         <span>Embedded Systems</span>
     </div>
+</section>
 
-    <!-- BUTTON -->
-    <button onclick="alert('Thank you for visiting my portfolio!')">Say Hello 👋</button>
+<section id="projects">
+    <h2>Projects</h2>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>©️ 2026 Silla Agen Portfolio</p>
-    </footer>
+    <div class="project-box">
+        <h3>Smart Irrigation System</h3>
+        <p>Automated farming solution using sensors and microcontrollers.</p>
+    </div>
+
+    <div class="project-box">
+        <h3>Line Following Robot</h3>
+        <p>Autonomous robot built with Arduino and IR sensors.</p>
+    </div>
+
+    <div class="project-box">
+        <h3>Portfolio Website</h3>
+        <p>Responsive modern portfolio hosted on GitHub Pages.</p>
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sillaagenmwakaje@gmail.com">sillaagenmwakaje@gmail.com</a></p>
+    <p>Location: Dar es Salaam, Tanzania</p>
+
+    <div class="social">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Instagram</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Silla Agen Mwakaje | All Rights Reserved</p>
+</footer>
+
+<script>
+    function toggleMode() {
+        document.body.classList.toggle("light-mode");
+    }
+</script>
 
 </body>
 </html>
-
