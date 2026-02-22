@@ -2,201 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Responsive Email Template - Silla Agen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO META TAGS -->
-    <meta name="description" content="Silla Agen personal developer portfolio. Modern web projects, skills, and biography.">
-    <meta name="keywords" content="Silla Agen, Web Developer, HTML, CSS, JavaScript, Mechatronics, Portfolio, GitHub">
-    <meta name="author" content="Silla Agen">
-    
-    <title>Silla Agen – Developer Portfolio</title>
-    
-    <!-- GOOGLE SITE VERIFICATION -->
-    <meta name="google-site-verification" content="1oZt91UHBfD8UAxdpHZk1EI2n6ISdsh-hHM2H5WWq_8" />
-
-    <!-- STYLES -->
-    <style>
-        /* RESET */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to bottom right, #f4f6f9, #dbe9f7);
-            color: #333;
-            line-height: 1.6;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        /* DARK MODE */
-        body.dark {
-            background: #121212;
-            color: #f4f4f4;
-        }
-
-        header {
-            text-align: center;
-            padding: 50px 20px 20px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: #1d4ed8;
-        }
-
-        /* BUTTONS */
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 5px;
-            background: #1d4ed8;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        .btn:hover { background: #2563eb; }
-
-        /* DARK MODE TOGGLE */
-        #darkModeToggle {
-            cursor: pointer;
-            background: #333;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
-
-        /* HERO IMAGE */
-        img.profile {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #1d4ed8;
-            margin: 20px 0;
-        }
-
-        /* ABOUT / BIO */
-        section.bio, section.skills, section.projects, section.contact {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background: rgba(255,255,255,0.85);
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-
-        body.dark section.bio, body.dark section.skills, body.dark section.projects, body.dark section.contact {
-            background: rgba(30,30,30,0.85);
-        }
-
-        h2 { margin-bottom: 20px; color: #1d4ed8; }
-
-        /* SKILLS */
-        .skills span {
-            display: inline-block;
-            background: #1d4ed8;
-            color: white;
-            padding: 8px 15px;
-            margin: 5px;
-            border-radius: 20px;
-        }
-
-        /* PROJECTS */
-        .project-card {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        body.dark .project-card { background: #222; }
-
-        /* CONTACT / SOCIAL */
-        .social-links a { margin: 0 10px; color: #1d4ed8; font-weight: bold; }
-
-        body.dark .social-links a { color: #60a5fa; }
-
-        /* RESPONSIVE */
-        @media(max-width: 600px) {
-            header h1 { font-size: 2rem; }
-            img.profile { width: 150px; height: 150px; }
-        }
-    </style>
 </head>
-<body>
+<body style="margin:0; padding:0; background-color:#f0f2f5;">
 
-    <!-- HEADER / HERO -->
-    <header>
-        <h1>Silla Agen Mwakaje</h1>
-        <img src="silla.jpg" alt="Silla Photo" class="profile">
-        <br>
-        <button id="darkModeToggle">Toggle Dark Mode 🌙</button>
-    </header>
+  <!-- Full-width container -->
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td align="center">
 
-    <!-- BIO -->
-    <section class="bio">
-        <h2>About Me</h2>
-        <p>
-            Welcome to my portfolio! I am Silla Agen, a passionate Mechatronics Engineering student from Dar es Salaam, Tanzania.
-            I love building modern web projects, exploring technology, and sharing knowledge. This website showcases my skills,
-            projects, and work in progress.
-        </p>
-    </section>
+        <!-- Main container -->
+        <table width="600" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff; border-radius:8px; overflow:hidden; font-family:Arial, sans-serif;">
 
-    <!-- SKILLS -->
-    <section class="skills">
-        <h2>Skills</h2>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Python</span>
-        <span>Embedded Systems</span>
-        <span>React</span>
-        <span>Node.js</span>
-    </section>
+          <!-- Header -->
+          <tr>
+            <td align="center" style="background:#1d4ed8; color:white; padding:30px;">
+              <h1 style="margin:0; font-size:24px;">Silla Agen</h1>
+              <p style="margin:5px 0 0 0; font-size:16px;">Front-End Web Developer | Portfolio Practice</p>
+            </td>
+          </tr>
 
-    <!-- PROJECTS -->
-    <section class="projects">
-        <h2>Practice Projects</h2>
+          <!-- Profile Image -->
+          <tr>
+            <td align="center" style="padding:20px;">
+              <img src="images/silla-profile.jpg" width="150" style="border-radius:50%; display:block;" alt="Silla Agen">
+            </td>
+          </tr>
 
-        <div class="project-card">
-            <h3>Responsive HTML Email Template</h3>
-            <p>A practice project demonstrating table-based HTML email layout design.</p>
-            <a href="projects/email-practice.html" target="_blank" class="btn">View Project</a>
-        </div>
+          <!-- Body Content -->
+          <tr>
+            <td style="padding:30px; color:#333333; font-size:16px; line-height:1.6;">
+              <p>Hello!</p>
+              <p>This is a practice HTML email template project I built to improve my web development skills. It uses table-based layout and inline CSS to ensure compatibility with email clients like Apple Mail, Gmail, and Outlook.</p>
+              <p>The design is simple, modern, and responsive-friendly. I will continue refining it and creating more professional email templates as I gain experience.</p>
+            </td>
+          </tr>
 
-        <!-- Add more projects here -->
-    </section>
+          <!-- Call-to-Action Button -->
+          <tr>
+            <td align="center" style="padding:20px;">
+              <a href="https://yourportfolio.com" style="background:#1d4ed8; color:white; text-decoration:none; padding:12px 25px; border-radius:5px; display:inline-block; font-size:16px;">View My Portfolio</a>
+            </td>
+          </tr>
 
-    <!-- CONTACT -->
-    <section class="contact">
-        <h2>Contact & Social</h2>
-        <p>Email: <a href="mailto:sillaagenmwakaje@gmail.com">sillaagenmwakaje@gmail.com</a></p>
-        <div class="social-links">
-            <a href="https://github.com/silla-agen" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/silla-agen" target="_blank">LinkedIn</a>
-        </div>
-        <br>
-        <a href="Silla_Agen_CV.pdf" class="btn" target="_blank">Download CV</a>
-    </section>
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding:20px; background:#f0f2f5; font-size:12px; color:#555555;">
+              © 2026 Silla Agen | Dar es Salaam, Tanzania
+            </td>
+          </tr>
 
-    <!-- FOOTER -->
-    <footer style="text-align:center; margin:30px 0;">
-        <p>©️ 2026 Silla Agen Portfolio</p>
-    </footer>
+        </table>
 
-    <!-- SCRIPT -->
-    <script>
-        const toggle = document.getElementById('darkModeToggle');
-        toggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark');
-        });
-    </script>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Responsive for mobile -->
+  <style>
+    @media only screen and (max-width: 620px) {
+      table[width="600"] {
+        width: 100% !important;
+      }
+      img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+      td {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+    }
+  </style>
 
 </body>
 </html>
