@@ -1,233 +1,202 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO META TAGS -->
+    <meta name="description" content="Silla Agen personal developer portfolio. Modern web projects, skills, and biography.">
+    <meta name="keywords" content="Silla Agen, Web Developer, HTML, CSS, JavaScript, Mechatronics, Portfolio, GitHub">
+    <meta name="author" content="Silla Agen">
+    
+    <title>Silla Agen – Developer Portfolio</title>
+    
+    <!-- GOOGLE SITE VERIFICATION -->
+    <meta name="google-site-verification" content="1oZt91UHBfD8UAxdpHZk1EI2n6ISdsh-hHM2H5WWq_8" />
 
-    <!-- SEO -->
-    <meta name="description" content="Silla Agen Mwakaje - Mechatronics Engineering student and web developer from Tanzania. Explore projects, skills and portfolio.">
-    <meta name="keywords" content="Silla Agen, Developer, Portfolio, Tanzania, Mechatronics, Web Developer">
-    <meta name="author" content="Silla Agen Mwakaje">
-
-    <title>Silla Agen | Portfolio</title>
-
+    <!-- STYLES -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+        /* RESET */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-            transition: 0.4s;
-        }
-
-        body.light-mode {
-            background: #f4f6f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #f4f6f9, #dbe9f7);
             color: #333;
+            line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
         }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 20px;
-            background: rgba(0,0,0,0.6);
-            position: sticky;
-            top: 0;
-            backdrop-filter: blur(10px);
+        /* DARK MODE */
+        body.dark {
+            background: #121212;
+            color: #f4f4f4;
         }
 
-        nav a {
+        header {
+            text-align: center;
+            padding: 50px 20px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #1d4ed8;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            background: #1d4ed8;
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
         }
 
-        nav a:hover {
-            color: #38bdf8;
-        }
+        .btn:hover { background: #2563eb; }
 
-        .toggle-btn {
-            position: absolute;
-            right: 20px;
-            top: 18px;
+        /* DARK MODE TOGGLE */
+        #darkModeToggle {
             cursor: pointer;
-            font-size: 14px;
-            background: #38bdf8;
+            background: #333;
+            color: #fff;
             border: none;
-            padding: 6px 12px;
-            border-radius: 20px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 10px;
         }
 
-        section {
-            padding: 70px 20px;
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-            animation: fadeIn 1s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {opacity: 0; transform: translateY(20px);}
-            to {opacity: 1; transform: translateY(0);}
-        }
-
-        .hero img {
-            width: 170px;
-            height: 170px;
+        /* HERO IMAGE */
+        img.profile {
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #38bdf8;
-            margin-bottom: 20px;
+            border: 5px solid #1d4ed8;
+            margin: 20px 0;
         }
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
+        /* ABOUT / BIO */
+        section.bio, section.skills, section.projects, section.contact {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255,255,255,0.85);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
 
-        h2 {
-            margin-bottom: 25px;
-            color: #38bdf8;
+        body.dark section.bio, body.dark section.skills, body.dark section.projects, body.dark section.contact {
+            background: rgba(30,30,30,0.85);
         }
 
+        h2 { margin-bottom: 20px; color: #1d4ed8; }
+
+        /* SKILLS */
         .skills span {
             display: inline-block;
-            background: #38bdf8;
-            color: black;
+            background: #1d4ed8;
+            color: white;
             padding: 8px 15px;
             margin: 5px;
             border-radius: 20px;
-            font-size: 14px;
         }
 
-        .project-box {
-            background: rgba(255,255,255,0.1);
+        /* PROJECTS */
+        .project-card {
+            background: white;
             padding: 20px;
             margin: 15px 0;
             border-radius: 12px;
-            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        body.light-mode .project-box {
-            background: white;
-        }
+        body.dark .project-card { background: #222; }
 
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #38bdf8;
-            color: black;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-        }
+        /* CONTACT / SOCIAL */
+        .social-links a { margin: 0 10px; color: #1d4ed8; font-weight: bold; }
 
-        .social a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #38bdf8;
-            font-weight: bold;
-        }
+        body.dark .social-links a { color: #60a5fa; }
 
-        footer {
-            padding: 20px;
-            text-align: center;
-            background: black;
-            margin-top: 40px;
-        }
-
-        @media(max-width:600px){
-            h1 {font-size: 24px;}
+        /* RESPONSIVE */
+        @media(max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            img.profile { width: 150px; height: 150px; }
         }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <button class="toggle-btn" onclick="toggleMode()">Toggle Mode</button>
-</nav>
+    <!-- HEADER / HERO -->
+    <header>
+        <h1>Silla Agen Mwakaje</h1>
+        <img src="silla.jpg" alt="Silla Photo" class="profile">
+        <br>
+        <button id="darkModeToggle">Toggle Dark Mode 🌙</button>
+    </header>
 
-<section class="hero">
-    <img src="silla.jpg" alt="Silla Agen">
-    <h1>Silla Agen Mwakaje</h1>
-    <p>Mechatronics Engineering Student | Web Developer</p>
-    <a href="#" class="btn">Download CV</a>
-</section>
+    <!-- BIO -->
+    <section class="bio">
+        <h2>About Me</h2>
+        <p>
+            Welcome to my portfolio! I am Silla Agen, a passionate Mechatronics Engineering student from Dar es Salaam, Tanzania.
+            I love building modern web projects, exploring technology, and sharing knowledge. This website showcases my skills,
+            projects, and work in progress.
+        </p>
+    </section>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a passionate Mechatronics Engineering student from Dar es Salaam, Tanzania.
-        I build smart systems, robotics projects and modern web applications.
-        My mission is to combine engineering and software to create impactful solutions.
-    </p>
-</section>
-
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
+    <!-- SKILLS -->
+    <section class="skills">
+        <h2>Skills</h2>
         <span>HTML</span>
         <span>CSS</span>
         <span>JavaScript</span>
         <span>Python</span>
-        <span>Arduino</span>
         <span>Embedded Systems</span>
-    </div>
-</section>
+        <span>React</span>
+        <span>Node.js</span>
+    </section>
 
-<section id="projects">
-    <h2>Projects</h2>
+    <!-- PROJECTS -->
+    <section class="projects">
+        <h2>Practice Projects</h2>
 
-    <div class="project-box">
-        <h3>Smart Irrigation System</h3>
-        <p>Automated farming solution using sensors and microcontrollers.</p>
-    </div>
+        <div class="project-card">
+            <h3>Responsive HTML Email Template</h3>
+            <p>A practice project demonstrating table-based HTML email layout design.</p>
+            <a href="projects/email-practice.html" target="_blank" class="btn">View Project</a>
+        </div>
 
-    <div class="project-box">
-        <h3>Line Following Robot</h3>
-        <p>Autonomous robot built with Arduino and IR sensors.</p>
-    </div>
+        <!-- Add more projects here -->
+    </section>
 
-    <div class="project-box">
-        <h3>Portfolio Website</h3>
-        <p>Responsive modern portfolio hosted on GitHub Pages.</p>
-    </div>
+    <!-- CONTACT -->
+    <section class="contact">
+        <h2>Contact & Social</h2>
+        <p>Email: <a href="mailto:sillaagenmwakaje@gmail.com">sillaagenmwakaje@gmail.com</a></p>
+        <div class="social-links">
+            <a href="https://github.com/silla-agen" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/silla-agen" target="_blank">LinkedIn</a>
+        </div>
+        <br>
+        <a href="Silla_Agen_CV.pdf" class="btn" target="_blank">Download CV</a>
+    </section>
 
-</section>
+    <!-- FOOTER -->
+    <footer style="text-align:center; margin:30px 0;">
+        <p>©️ 2026 Silla Agen Portfolio</p>
+    </footer>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:sillaagenmwakaje@gmail.com">sillaagenmwakaje@gmail.com</a></p>
-    <p>Location: Dar es Salaam, Tanzania</p>
-
-    <div class="social">
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
-        <a href="#">Instagram</a>
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 Silla Agen Mwakaje | All Rights Reserved</p>
-</footer>
-
-<script>
-    function toggleMode() {
-        document.body.classList.toggle("light-mode");
-    }
-</script>
+    <!-- SCRIPT -->
+    <script>
+        const toggle = document.getElementById('darkModeToggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+        });
+    </script>
 
 </body>
 </html>
