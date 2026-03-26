@@ -4,20 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO META TAGS -->
-    <meta name="description" content="Silla Agen personal developer portfolio. Biography, skills, and project demos.">
-    <meta name="keywords" content="Silla Agen, developer, portfolio, Tanzania, web developer, Mechatronics">
+    <!-- SEO -->
+    <meta name="description" content="Silla Agen personal developer portfolio.">
+    <meta name="keywords" content="Silla Agen, portfolio, developer, Tanzania">
     <meta name="author" content="Silla Agen">
     <meta name="robots" content="index, follow">
-    <meta name="google-site-verification" content="1oZt91UHBfD8UAxdpHZk1EI2n6ISdsh-hHM2H5WWq_8" />
 
-    <!-- TITLE -->
-    <title>Silla Agen Mwakaje | Web Developer & Mechatronics Engineer</title>
+    <title>Silla Agen Mwakaje | Portfolio</title>
 
-    <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="silla.jpg">
+    <link rel="icon" href="silla.jpg">
 
-    <!-- STYLING -->
     <style>
         * {
             box-sizing: border-box;
@@ -26,41 +22,50 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             background: linear-gradient(to bottom right, #f4f6f9, #dbe9f7);
             color: #333;
             text-align: center;
             padding: 30px 20px;
+            transition: 0.4s;
         }
 
         h1 {
-            margin-bottom: 15px;
             color: #2c3e50;
         }
 
-        /* PROFILE IMAGE (FULL IMAGE STYLE) */
+        /* DARK MODE */
+        body.dark {
+            background: linear-gradient(to bottom right, #0f2027, #203a43);
+            color: #f1f1f1;
+        }
+
+        body.dark h1 { color: #fff; }
+
+        /* TOGGLE BUTTON */
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            border: none;
+            background: #2c3e50;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* PROFILE IMAGE */
         img.profile {
             width: 260px;
-            height: auto;
             border-radius: 15px;
-            object-fit: contain;
-            border: 4px solid #3498db;
             margin-top: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        /* INFO SECTION */
-        .info {
-            margin-top: 25px;
-            font-size: 18px;
-            line-height: 1.6;
-        }
+        .info { margin-top: 20px; }
 
-        .info p {
-            margin: 8px 0;
-        }
-
-        /* BIOGRAPHY WITH BLUR BACKGROUND */
+        /* BIO (GLASS EFFECT) */
         .bio {
             position: relative;
             max-width: 700px;
@@ -68,7 +73,7 @@
             padding: 25px;
             border-radius: 15px;
             overflow: hidden;
-            color: #fff;
+            color: white;
         }
 
         .bio::before {
@@ -77,7 +82,6 @@
             inset: 0;
             background: url("silla.jpg") center/cover no-repeat;
             filter: blur(15px);
-            transform: scale(1.1);
             z-index: -2;
         }
 
@@ -89,110 +93,136 @@
             z-index: -1;
         }
 
-        .bio p {
-            position: relative;
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
         /* SKILLS */
-        .skills {
-            margin: 30px 0;
-        }
-
         .skills span {
-            display: inline-block;
-            background-color: #3498db;
+            background: #3498db;
             color: white;
             padding: 8px 15px;
             margin: 5px;
             border-radius: 20px;
-            font-size: 14px;
+            display: inline-block;
         }
 
-        /* BUTTON */
-        .btn {
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 8px;
-            font-size: 16px;
-            text-decoration: none;
-            display: inline-block;
+        /* PROJECTS SECTION */
+        .projects {
+            margin-top: 50px;
+        }
+
+        .projects h2 {
+            margin-bottom: 20px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             transition: 0.3s;
         }
 
-        .btn:hover {
-            background-color: #2980b9;
+        .project-card:hover {
+            transform: translateY(-5px);
         }
 
-        /* FOOTER */
+        body.dark .project-card {
+            background: #1e1e1e;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #3498db;
+            text-decoration: none;
+        }
+
         footer {
             margin-top: 50px;
-            background-color: #2c3e50;
+            background: #2c3e50;
             color: white;
             padding: 15px;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 600px) {
-            img.profile {
-                width: 90%;
-            }
-
-            .bio {
-                font-size: 14px;
-            }
-
-            .btn {
-                width: 80%;
-            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Silla Agen Mwakaje</h1>
+<button id="themeToggle" class="toggle-btn">🌙</button>
 
-    <!-- PROFILE IMAGE -->
-    <img src="silla.jpg" alt="Silla Agen Mwakaje Profile Photo" class="profile">
+<h1>Silla Agen Mwakaje</h1>
 
-    <!-- PERSONAL INFO -->
-    <div class="info">
-        <p><strong>Age:</strong> 22</p>
-        <p><strong>Birth Place:</strong> Dar es Salaam, Tanzania</p>
-        <p><strong>Current Living:</strong> Dar es Salaam</p>
-        <p><strong>Profession:</strong> Mechatronics Engineering Student</p>
+<img src="silla.jpg" class="profile">
+
+<div class="info">
+    <p><strong>Age:</strong> 22</p>
+    <p><strong>Location:</strong> Dar es Salaam</p>
+    <p><strong>Profession:</strong> Mechatronics Engineering Student</p>
+</div>
+
+<div class="bio">
+    <p>
+        Passionate about technology, engineering, and innovation. 
+        I build smart systems, develop software, and explore modern tech solutions.
+    </p>
+</div>
+
+<div class="skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Python</span>
+    <span>Embedded Systems</span>
+</div>
+
+<!-- PROJECTS -->
+<div class="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <h3>Email Practice Project</h3>
+            <p>Simple email form using HTML.</p>
+            <a href="projects/email-practice.html" target="_blank">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Coming Soon</h3>
+            <p>More projects will be added.</p>
+        </div>
+
     </div>
+</div>
 
-    <!-- BIOGRAPHY -->
-    <div class="bio">
-        <p>
-            Welcome to my official website! My name is Silla Agen Mwakaje, a passionate Mechatronics Engineering student from Dar es Salaam, Tanzania.
-            I love exploring technology, building innovative projects, and sharing knowledge with the world.
-            My journey in tech and engineering has been exciting, and I aim to create solutions that make life easier and smarter.
-        </p>
-    </div>
+<footer>
+    <p>©️ 2026 Silla Agen Portfolio</p>
+</footer>
 
-    <!-- SKILLS -->
-    <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Python</span>
-        <span>Embedded Systems</span>
-    </div>
+<script>
+const toggleBtn = document.getElementById("themeToggle");
 
-    <!-- PROJECT BUTTON -->
-    <a href="projects/email-practice.html" class="btn" target="_blank">View Email Project</a>
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggleBtn.textContent = "☀️";
+}
 
-    <!-- FOOTER -->
-    <footer>
-        <p>©️ 2026 Silla Agen Portfolio</p>
-    </footer>
+toggleBtn.onclick = () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+        toggleBtn.textContent = "☀️";
+    } else {
+        localStorage.setItem("theme", "light");
+        toggleBtn.textContent = "🌙";
+    }
+};
+</script>
 
 </body>
 </html>
