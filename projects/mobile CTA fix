@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Email Template - Silla Agen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0; padding:0; background-color:#f0f2f5;">
+
+  <!-- Full-width container -->
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td align="center">
+
+        <!-- Main container -->
+        <table width="600" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff; border-radius:10px; overflow:hidden; font-family:Arial, sans-serif; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+
+          <!-- Header -->
+          <tr>
+            <td align="center" style="background:#1d4ed8; color:white; padding:30px;">
+              <h1 style="margin:0; font-size:24px;">Silla Agen</h1>
+              <p style="margin:5px 0 0 0; font-size:16px;">Front-End Web Developer | Portfolio Practice</p>
+            </td>
+          </tr>
+
+          <!-- Profile Image (FIXED) -->
+          <tr>
+            <td align="center" style="padding:20px;">
+              <img src="silla-profile.jpg" width="180" 
+                   style="border-radius:15px; display:block; border:4px solid #1d4ed8; box-shadow:0 8px 20px rgba(0,0,0,0.2);" 
+                   alt="Silla Agen">
+            </td>
+          </tr>
+
+          <!-- Body Content -->
+          <tr>
+            <td style="padding:30px; color:#333333; font-size:16px; line-height:1.6;">
+              <p>Hello!</p>
+              <p>This is a practice HTML email template project I built to improve my web development skills. It uses table-based layout and inline CSS to ensure compatibility with email clients like Apple Mail, Gmail, and Outlook.</p>
+              <p>The design is simple, modern, and responsive-friendly. I will continue refining it and creating more professional email templates as I gain experience.</p>
+            </td>
+          </tr>
+
+          <!-- Call-to-Action Button -->
+          <tr>
+            <td align="center" style="padding:20px;">
+              <a href="https://yourportfolio.com" style="background:#1d4ed8; color:white; text-decoration:none; padding:12px 25px; border-radius:5px; display:inline-block; font-size:16px;">View My Portfolio</a>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding:20px; background:#f0f2f5; font-size:12px; color:#555555;">
+              © 2026 Silla Agen | Dar es Salaam, Tanzania
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+  <!-- Responsive for mobile -->
+  <style>
+    @media only screen and (max-width: 620px) {
+      table[width="600"] {
+        width: 100% !important;
+      }
+      img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+      td {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+    }
+  </style>
+
+</body>
+</html>
