@@ -2,81 +2,214 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Responsive Email Template - Silla Agen</title>
+    <title>Landing Page - Silla Agen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* GENERAL STYLING */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #f4f6f9, #dbe9f7);
+            color: #333;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        /* PROFILE IMAGE */
+        img.profile {
+            width: 260px;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* INFO SECTION */
+        .info { margin-top: 25px; font-size: 18px; line-height: 1.6; }
+        .info p { margin: 8px 0; }
+
+        /* BIOGRAPHY */
+        .bio {
+            max-width: 700px;
+            margin: 25px auto;
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            text-align: justify;
+            padding: 25px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+
+        .bio::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url("silla.jpg") center/cover no-repeat;
+            filter: blur(15px);
+            z-index: -2;
+        }
+
+        .bio::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: -1;
+        }
+
+        /* SKILLS */
+        .skills { margin: 30px 0; }
+        .skills span {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* CTA BUTTON */
+        .cta-container {
+            text-align: center; /* ensures button is centered */
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+
+        /* PROJECTS */
+        .projects {
+            margin-top: 50px;
+        }
+
+        .projects h2 {
+            margin-bottom: 20px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer {
+            margin-top: 50px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+        }
+
+        /* RESPONSIVE FIXES */
+        @media (max-width: 600px) {
+            .bio { font-size: 14px; padding: 20px; }
+            .cta-button {
+                display: block;
+                margin: 15px auto 0;
+                max-width: 90%;
+            }
+        }
+    </style>
 </head>
-<body style="margin:0; padding:0; background-color:#f0f2f5;">
+<body>
 
-  <!-- Full-width container -->
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-    <tr>
-      <td align="center">
+    <h1>Silla Agen Mwakaje</h1>
 
-        <!-- Main container -->
-        <table width="600" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff; border-radius:10px; overflow:hidden; font-family:Arial, sans-serif; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+    <img src="silla.jpg" alt="Silla Photo" class="profile">
 
-          <!-- Header -->
-          <tr>
-            <td align="center" style="background:#1d4ed8; color:white; padding:30px;">
-              <h1 style="margin:0; font-size:24px;">Silla Agen</h1>
-              <p style="margin:5px 0 0 0; font-size:16px;">Front-End Web Developer | Portfolio Practice</p>
-            </td>
-          </tr>
+    <div class="info">
+        <p><strong>Age:</strong> 22</p>
+        <p><strong>Birth Place:</strong> Dar es Salaam, Tanzania</p>
+        <p><strong>Current Living:</strong> Dar es Salaam</p>
+        <p><strong>Profession:</strong> Mechatronics Engineering Student</p>
+    </div>
 
-          <!-- Profile Image (FIXED) -->
-          <tr>
-            <td align="center" style="padding:20px;">
-              <img src="silla-profile.jpg" width="180" 
-                   style="border-radius:15px; display:block; border:4px solid #1d4ed8; box-shadow:0 8px 20px rgba(0,0,0,0.2);" 
-                   alt="Silla Agen">
-            </td>
-          </tr>
+    <div class="bio">
+        <p>
+            Welcome to my official website! My name is Silla Agen Mwakaje, a passionate Mechatronics Engineering student from Dar es Salaam, Tanzania.  
+            I love exploring technology, building innovative projects, and sharing knowledge with the world.  
+            My journey in tech and engineering has been exciting, and I aim to create solutions that make life easier and smarter.
+        </p>
+    </div>
 
-          <!-- Body Content -->
-          <tr>
-            <td style="padding:30px; color:#333333; font-size:16px; line-height:1.6;">
-              <p>Hello!</p>
-              <p>This is a practice HTML email template project I built to improve my web development skills. It uses table-based layout and inline CSS to ensure compatibility with email clients like Apple Mail, Gmail, and Outlook.</p>
-              <p>The design is simple, modern, and responsive-friendly. I will continue refining it and creating more professional email templates as I gain experience.</p>
-            </td>
-          </tr>
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>Embedded Systems</span>
+    </div>
 
-          <!-- Call-to-Action Button -->
-          <tr>
-            <td align="center" style="padding:20px;">
-              <a href="https://yourportfolio.com" style="background:#1d4ed8; color:white; text-decoration:none; padding:12px 25px; border-radius:5px; display:inline-block; font-size:16px;">View My Portfolio</a>
-            </td>
-          </tr>
+    <!-- CTA BUTTON -->
+    <div class="cta-container">
+        <a href="#projects" class="cta-button">View My Projects</a>
+    </div>
 
-          <!-- Footer -->
-          <tr>
-            <td align="center" style="padding:20px; background:#f0f2f5; font-size:12px; color:#555555;">
-              © 2026 Silla Agen | Dar es Salaam, Tanzania
-            </td>
-          </tr>
+    <!-- PROJECTS -->
+    <div class="projects" id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Email Practice Project</h3>
+                <p>Simple email form using HTML.</p>
+                <a href="projects/email-practice.html" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Coming Soon</h3>
+                <p>More projects will be added.</p>
+            </div>
+        </div>
+    </div>
 
-        </table>
-
-      </td>
-    </tr>
-  </table>
-
-  <!-- Responsive for mobile -->
-  <style>
-    @media only screen and (max-width: 620px) {
-      table[width="600"] {
-        width: 100% !important;
-      }
-      img {
-        max-width: 100% !important;
-        height: auto !important;
-      }
-      td {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-      }
-    }
-  </style>
+    <footer>
+        <p>©️ 2026 Silla Agen Portfolio</p>
+    </footer>
 
 </body>
 </html>
