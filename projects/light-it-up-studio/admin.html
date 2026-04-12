@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: white;
+    padding: 30px;
+}
+
+h1 {
+    color: #ffb300;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #111;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #333;
+    text-align: left;
+}
+
+th {
+    background: #ffb300;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background: #161616;
+}
+</style>
+</head>
+<body>
+
+<h1>LIGHT IT UP - Bookings Dashboard</h1>
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Service</th>
+    <th>Date</th>
+    <th>Message</th>
+</tr>
+
+{% for booking in bookings %}
+<tr>
+    <td>{{ booking[0] }}</td>
+    <td>{{ booking[1] }}</td>
+    <td>{{ booking[2] }}</td>
+    <td>{{ booking[3] }}</td>
+    <td>{{ booking[4] }}</td>
+    <td>{{ booking[5] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>
