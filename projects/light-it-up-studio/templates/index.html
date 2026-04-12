@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIGHT IT UP Studio</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<!-- HERO SLIDER -->
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>LIGHT IT <span>UP</span></h1>
+        <p>Where Sound Becomes Energy</p>
+
+        <div class="producer">Produced by SILLAR</div>
+
+        <button class="btn">Book a Session</button>
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+    <h2>Our Services</h2>
+
+    <div class="services">
+        <div class="card"><h3>Recording</h3><p>High quality studio recording.</p></div>
+        <div class="card"><h3>Production</h3><p>Custom beats & sound design.</p></div>
+        <div class="card"><h3>Mixing</h3><p>Industry level mixing.</p></div>
+        <div class="card"><h3>Mastering</h3><p>Final polished sound.</p></div>
+    </div>
+</section>
+
+<!-- GALLERY (LOCAL IMAGES) -->
+<section class="section">
+    <h2>Inside The Studio</h2>
+    <p>Purple energy. Creative space.</p>
+
+    <div class="gallery">
+        <img src="{{ url_for('static', filename='images/image1.jpg') }}">
+        <img src="{{ url_for('static', filename='images/image2.jpg') }}">
+        <img src="{{ url_for('static', filename='images/image3.jpg') }}">
+        <img src="{{ url_for('static', filename='images/image4.jpg') }}">
+        <img src="{{ url_for('static', filename='images/image5.jpg') }}">
+        <img src="{{ url_for('static', filename='images/image6.jpg') }}">
+    </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section">
+    <h2>Book a Session</h2>
+
+    <form action="/book" method="POST">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <select name="service" required>
+            <option>Recording</option>
+            <option>Production</option>
+            <option>Mixing</option>
+            <option>Mastering</option>
+        </select>
+
+        <input type="date" name="date" required>
+
+        <textarea name="message" placeholder="Tell us about your project"></textarea>
+
+        <button class="btn" type="submit">Submit Booking</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 LIGHT IT UP Studio | Produced by SILLAR</p>
+</footer>
+
+</body>
+</html>
