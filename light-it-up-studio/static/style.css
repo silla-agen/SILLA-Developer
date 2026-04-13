@@ -171,13 +171,13 @@ nav a:hover{
 
 /* SLIDES */
 @keyframes slide{
-    0%   { background-image:url("/static/images/image1.jpg"); }
-    16%  { background-image:url("/static/images/image2.jpg"); }
-    32%  { background-image:url("/static/images/image3.jpg"); }
-    48%  { background-image:url("/static/images/image4.jpg"); }
-    64%  { background-image:url("/static/images/image5.jpg"); }
-    80%  { background-image:url("/static/images/image6.jpg"); }
-    100% { background-image:url("/static/images/image1.jpg"); }
+    0%   { background-image:url("/static/image/image1.jpg"); }
+    16%  { background-image:url("/static/image/image2.jpg"); }
+    32%  { background-image:url("/static/image/image3.jpg"); }
+    48%  { background-image:url("/static/image/image4.jpg"); }
+    64%  { background-image:url("/static/image/image5.jpg"); }
+    80%  { background-image:url("/static/image/image6.jpg"); }
+    100% { background-image:url("/static/image/image1.jpg"); }
 }   transform:scale(1.03);
     box-shadow:0 0 22px rgba(184,77,255,0.22);
 }
