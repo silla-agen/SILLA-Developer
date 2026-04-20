@@ -4,264 +4,510 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Silla Agen Portfolio</title>
+<title>Sillar | Shop Smarter. Compare Prices. Save More.</title>
+<meta name="description" content="Sillar helps you compare prices, discover deals, and shop smarter online.">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Segoe UI',sans-serif;
-    background:linear-gradient(135deg,#eef4ff,#dcecff,#f8fbff);
-    color:#222;
-    text-align:center;
-    padding:20px;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#0b0b0f;
+  color:#fff;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
 }
 
 /* HEADER */
-h1{
-    font-size:42px;
-    margin-top:10px;
-    color:#111827;
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(11,11,15,0.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
-.subtitle{
-    color:#555;
-    margin-top:8px;
-    font-size:18px;
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
 }
 
-/* PROFILE */
-.profile{
-    width:220px;
-    border-radius:20px;
-    margin-top:24px;
-    box-shadow:0 14px 30px rgba(0,0,0,0.16);
+.logo{
+  font-size:1.8rem;
+  font-weight:800;
 }
 
-/* INFO */
-.info{
-    margin-top:22px;
-    font-size:18px;
+.logo span{
+  color:#7c5cff;
 }
 
-.info p{
-    margin:8px 0;
+.nav-links{
+  display:flex;
+  gap:24px;
 }
 
-/* BIO */
-.bio{
-    max-width:760px;
-    margin:32px auto;
-    background:rgba(255,255,255,0.88);
-    padding:28px;
-    border-radius:20px;
-    line-height:1.8;
-    box-shadow:0 10px 24px rgba(0,0,0,0.08);
+.nav-links a{
+  color:#ddd;
+  transition:0.3s;
 }
 
-/* SKILLS */
-.skills{
-    margin:34px 0;
+.nav-links a:hover{
+  color:#fff;
 }
 
-.skills span{
-    display:inline-block;
-    background:#2563eb;
-    color:white;
-    padding:10px 16px;
-    margin:6px;
-    border-radius:999px;
-    font-size:14px;
-    box-shadow:0 6px 14px rgba(37,99,235,0.18);
+.menu-btn{
+  display:none;
+  font-size:1.7rem;
+  cursor:pointer;
 }
 
-/* BUTTON */
+/* HERO */
+.hero{
+  padding:90px 0 70px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.hero h1{
+  font-size:3.2rem;
+  line-height:1.1;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  color:#7c5cff;
+}
+
+.hero p{
+  color:#b8b8b8;
+  font-size:1.1rem;
+  margin-bottom:28px;
+}
+
+.buttons{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
 .btn{
-    display:inline-block;
-    padding:13px 28px;
-    background:#111827;
-    color:white;
-    text-decoration:none;
-    border-radius:12px;
-    margin-top:10px;
-    transition:0.3s;
-    font-weight:600;
+  padding:14px 24px;
+  border-radius:12px;
+  font-weight:bold;
+  transition:0.3s;
+  display:inline-block;
 }
 
-.btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 24px rgba(0,0,0,0.15);
+.primary{
+  background:#7c5cff;
 }
 
-/* PROJECTS */
-.projects{
-    margin-top:70px;
+.primary:hover{
+  background:#6848f5;
 }
 
-.projects h2{
-    font-size:34px;
-    margin-bottom:28px;
-    color:#111827;
+.secondary{
+  border:1px solid rgba(255,255,255,0.1);
 }
 
-.project-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:22px;
-    max-width:1100px;
-    margin:auto;
+.secondary:hover{
+  background:#181820;
 }
 
-.project-card{
-    background:white;
-    padding:26px;
-    border-radius:20px;
-    box-shadow:0 12px 26px rgba(0,0,0,0.08);
-    transition:0.3s;
-    text-align:left;
+/* MOCKUP */
+.mockup{
+  background:linear-gradient(145deg,#15151d,#111118);
+  padding:24px;
+  border-radius:24px;
+  border:1px solid rgba(255,255,255,0.06);
+  box-shadow:0 15px 40px rgba(0,0,0,0.35);
 }
 
-.project-card:hover{
-    transform:translateY(-6px);
+.product{
+  background:#171722;
+  padding:16px;
+  border-radius:16px;
+  margin-bottom:14px;
 }
 
-.project-card h3{
-    margin-bottom:12px;
-    color:#111827;
-    font-size:22px;
+.product h4{
+  margin-bottom:8px;
 }
 
-.project-card p{
-    color:#555;
-    line-height:1.7;
+.small{
+  color:#aaa;
+  font-size:0.92rem;
 }
 
-.project-card a{
-    display:inline-block;
-    margin-top:16px;
-    color:#2563eb;
-    text-decoration:none;
-    font-weight:700;
+/* SECTIONS */
+section{
+  padding:70px 0;
 }
 
-/* FEATURED */
-.featured{
-    border:2px solid #8b5cf6;
-    background:linear-gradient(135deg,#ffffff,#f6f0ff);
+.title{
+  text-align:center;
+  margin-bottom:45px;
 }
 
-/* COMING SOON CARD */
-.coming-soon{
-    background:linear-gradient(135deg,#111827,#1f2937);
-    color:white;
+.title h2{
+  font-size:2.2rem;
+  margin-bottom:10px;
 }
 
-.coming-soon h3,
-.coming-soon p{
-    color:white;
+.title p{
+  color:#aaa;
+}
+
+/* FEATURES */
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.card{
+  background:#14141c;
+  padding:26px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.06);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:#7c5cff;
+}
+
+.card h3{
+  margin-bottom:12px;
+}
+
+/* STEPS */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.step{
+  background:#14141c;
+  border-radius:18px;
+  padding:24px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.06);
+}
+
+.clickable{
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.clickable:hover{
+  transform:translateY(-6px);
+  border-color:#7c5cff;
+}
+
+.num{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:#7c5cff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 14px;
+  font-weight:bold;
+}
+
+.hidden-content{
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  margin-top:0;
+  color:#b8b8b8;
+  font-size:0.95rem;
+  transition:all 0.4s ease;
+}
+
+.step.active .hidden-content{
+  max-height:220px;
+  opacity:1;
+  margin-top:12px;
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  padding:55px 20px;
+  background:linear-gradient(145deg,#15151d,#111118);
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,0.06);
+}
+
+.cta h2{
+  font-size:2rem;
+  margin-bottom:12px;
+}
+
+.cta p{
+  color:#b8b8b8;
+  margin-bottom:24px;
 }
 
 /* FOOTER */
 footer{
-    margin-top:70px;
-    background:#111827;
-    color:white;
-    padding:20px;
-    border-radius:16px;
+  text-align:center;
+  padding:30px 0;
+  color:#8d8d8d;
+  border-top:1px solid rgba(255,255,255,0.06);
+  margin-top:60px;
 }
 
 /* MOBILE */
-@media(max-width:600px){
-    h1{
-        font-size:32px;
-    }
+@media(max-width:900px){
+  .hero-grid,
+  .grid-3,
+  .steps{
+    grid-template-columns:1fr;
+  }
 
-    .subtitle{
-        font-size:16px;
-    }
+  .hero h1{
+    font-size:2.3rem;
+  }
 
-    .profile{
-        width:180px;
-    }
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:70px;
+    left:0;
+    right:0;
+    background:#111118;
+    flex-direction:column;
+    padding:20px;
+    text-align:center;
+  }
 
-    .project-card{
-        text-align:center;
-    }
+  .nav-links.show{
+    display:flex;
+  }
 
-    .bio{
-        padding:22px;
-    }
+  .menu-btn{
+    display:block;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<h1>Silla Agen Mwakaje</h1>
-<p class="subtitle">Builder • Developer • Engineer</p>
+<header>
+<div class="container">
+<nav>
 
-<img src="silla.jpg" alt="Silla Photo" class="profile">
+<div class="logo">Sil<span>lar</span></div>
 
-<div class="info">
-    <p><strong>Age:</strong> 22</p>
-    <p><strong>Location:</strong> Dar es Salaam, Tanzania</p>
-    <p><strong>Profession:</strong> Mechatronics Engineering Student</p>
+<div class="nav-links" id="navLinks">
+<a href="#">Home</a>
+<a href="#features">Features</a>
+<a href="#how">How It Works</a>
+<a href="#contact">Contact</a>
 </div>
 
-<div class="bio">
-    <p>
-        Welcome to my official portfolio. I enjoy building real-world digital projects,
-        exploring web development, and combining engineering creativity with technology.
-        This page highlights my growth, skills, and the work I continue to create.
-    </p>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div class="container hero-grid">
+
+<div>
+<h1>Shop Smarter. <span>Compare Prices.</span> Save More.</h1>
+
+<p>
+Sillar helps you discover products, compare prices across stores,
+track deals, and make better online shopping decisions every day.
+</p>
+
+<div class="buttons">
+<a href="#contact" class="btn primary">Start Free</a>
+<a href="#features" class="btn secondary">Explore Features</a>
+</div>
 </div>
 
-<div class="skills">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-    <span>Python</span>
-    <span>Flask</span>
-    <span>SQLite</span>
+<div class="mockup">
+
+<div class="product">
+<h4>Wireless Headphones</h4>
+<p class="small">Store A: $59 | Store B: $48</p>
 </div>
 
-<a href="#projects" class="btn">View My Projects</a>
-
-<div class="projects" id="projects">
-    <h2>Featured Work</h2>
-
-    <div class="project-grid">
-
-        <!-- Main Project -->
-        <div class="project-card featured">
-            <h3>🎧 LIGHT IT UP Studio</h3>
-            <p>
-                Premium music studio website with booking section, image gallery,
-                modern UI, responsive design, and bold purple branding.
-            </p>
-            <a href="light-it-up-studio/" target="_blank">Launch Project →</a>
-        </div>
-
-        <!-- Future Project -->
-        <div class="project-card coming-soon">
-            <h3>🚀 New Project Loading</h3>
-            <p>
-                More advanced web experiences, tools, and innovations
-                will be added here soon.
-            </p>
-        </div>
-
-    </div>
+<div class="product">
+<h4>Running Shoes</h4>
+<p class="small">Best Deal Today: Save 25%</p>
 </div>
+
+<div class="product">
+<h4>Shopping Budget</h4>
+<p class="small">$120 spent of $200</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+<div class="container">
+
+<div class="title">
+<h2>Why Use Sillar</h2>
+<p>Everything you need for better online shopping.</p>
+</div>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>Price Comparison</h3>
+<p>Find the lowest prices from different stores instantly.</p>
+</div>
+
+<div class="card">
+<h3>Deal Alerts</h3>
+<p>Get notified when products drop in price.</p>
+</div>
+
+<div class="card">
+<h3>Smart Budgeting</h3>
+<p>Track spending and avoid overspending online.</p>
+</div>
+
+<div class="card">
+<h3>Wishlist Tracking</h3>
+<p>Save products and monitor discounts later.</p>
+</div>
+
+<div class="card">
+<h3>Trending Products</h3>
+<p>Discover popular products shoppers love right now.</p>
+</div>
+
+<div class="card">
+<h3>Fast Experience</h3>
+<p>Simple design built for speed and convenience.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+<div class="container">
+
+<div class="title">
+<h2>How It Works</h2>
+<p>Tap each step to learn more.</p>
+</div>
+
+<div class="steps">
+
+<div class="step clickable" onclick="toggleStep(this)">
+<div class="num">1</div>
+<h3>Search Products</h3>
+<p>Find any product instantly.</p>
+<div class="hidden-content">
+Search electronics, fashion, beauty, home tools and more from multiple stores.
+</div>
+</div>
+
+<div class="step clickable" onclick="toggleStep(this)">
+<div class="num">2</div>
+<h3>Compare Prices</h3>
+<p>Check prices side by side.</p>
+<div class="hidden-content">
+See which store gives the best price, better discount or faster delivery.
+</div>
+</div>
+
+<div class="step clickable" onclick="toggleStep(this)">
+<div class="num">3</div>
+<h3>Build Your Plan</h3>
+<p>Create wishlist & budget.</p>
+<div class="hidden-content">
+Track total costs, save products for later and control your monthly spending.
+</div>
+</div>
+
+<div class="step clickable" onclick="toggleStep(this)">
+<div class="num">4</div>
+<h3>Shop & Save</h3>
+<p>Buy smarter online.</p>
+<div class="hidden-content">
+Purchase with confidence and enjoy better deals every time you shop.
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- CTA -->
+<section id="contact">
+<div class="container">
+<div class="cta">
+<h2>Ready To Upgrade Your Shopping?</h2>
+<p>Join Sillar and start comparing smarter today.</p>
+<a href="#" class="btn primary">Join Now</a>
+</div>
+</div>
+</section>
 
 <footer>
-    <p>© 2026 Silla Agen Portfolio</p>
+<div class="container">
+© 2026 Sillar. All rights reserved.
+</div>
 </footer>
+
+<script>
+function toggleStep(element){
+  element.classList.toggle("active");
+}
+
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
