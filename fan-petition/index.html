@@ -237,11 +237,47 @@ button:hover{
 
 /* SHARE BUTTON */
 
+.share-container{
+  display:flex;
+  justify-content:center;
+}
+
 .share-btn{
 
   margin-top:25px;
 
-  width:100%;
+  padding:16px 38px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:#ff1493;
+
+  color:white;
+
+  font-size:1rem;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  width:auto;
+
+  box-shadow:
+  0 0 20px rgba(255,20,147,0.35);
+}
+
+.share-btn:hover{
+
+  transform:scale(1.04);
+
+  background:#ff3aa3;
+
+  box-shadow:
+  0 0 35px rgba(255,20,147,0.6);
 }
 
 /* FOOTER */
@@ -338,15 +374,19 @@ to your city.
 
 </div>
 
-<!-- SHARE -->
+<!-- SHARE BUTTON -->
+
+<div class="share-container">
 
 <button
 class="share-btn"
 id="shareBtn">
 
-SHARE THIS PETITION
+OPEN PROJECT
 
 </button>
+
+</div>
 
 <div class="footer">
 CITY HUNTERS IN YOUR AREA WORLD MOVEMENT
@@ -461,7 +501,7 @@ navigator.clipboard.writeText(
 window.location.href
 );
 
-alert("Petition link copied!");
+alert("Project link copied!");
 
 });
 
