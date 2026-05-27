@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<title>CITY HUNTERS Petition</title>
+<title>CITY HUNTERS IN YOUR AREA</title>
 
 <style>
 
@@ -12,7 +13,7 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
 }
 
 body{
@@ -22,85 +23,121 @@ body{
   overflow-x:hidden;
 }
 
+/* BACKGROUND */
+
 .background{
+
   position:fixed;
   inset:0;
 
   background:
   radial-gradient(circle at top,
-  rgba(255,0,120,0.18),
-  #000 55%);
+  rgba(255,20,147,0.22),
+  #000 60%);
 
   z-index:-1;
 }
 
+/* CONTAINER */
+
 .container{
+
   width:90%;
   max-width:650px;
+
   margin:auto;
+
   padding-top:60px;
+
   text-align:center;
 }
 
-h1{
-  font-size:3rem;
-  letter-spacing:3px;
-  margin-bottom:10px;
+/* TITLE */
 
-  color:#ff2f92;
+h1{
+
+  font-size:3.2rem;
+
+  letter-spacing:3px;
+
+  margin-bottom:12px;
+
+  color:#ff1493;
 
   text-shadow:
-  0 0 10px #ff2f92,
-  0 0 30px #ff2f92;
+  0 0 10px #ff1493,
+  0 0 30px rgba(255,20,147,0.7);
 }
 
 .subtitle{
-  color:#ffb6d4;
+
+  color:#ffb6d9;
+
   margin-bottom:40px;
-  line-height:1.7;
+
+  line-height:1.8;
+
+  font-size:1.05rem;
 }
 
+/* COUNTER */
+
 .counter-box{
-  background:rgba(15,15,15,0.9);
 
-  border:1px solid #ff2f92;
+  background:
+  rgba(15,15,15,0.95);
 
-  padding:25px;
-  border-radius:22px;
+  border:2px solid #ff1493;
+
+  padding:30px;
+
+  border-radius:24px;
 
   margin-bottom:35px;
 
   box-shadow:
-  0 0 20px rgba(255,47,146,0.3);
+  0 0 25px rgba(255,20,147,0.25);
 }
 
 #counter{
-  font-size:3rem;
+
+  font-size:3.2rem;
+
   font-weight:bold;
 
-  color:#ff2f92;
+  color:#ff1493;
 
   text-shadow:
-  0 0 12px #ff2f92;
+  0 0 14px rgba(255,20,147,0.8);
 }
 
 .counter-text{
-  color:#ffb6d4;
-  margin-top:8px;
+
+  color:#ffcce6;
+
+  margin-top:10px;
+
+  letter-spacing:1px;
 }
 
+/* FORM */
+
 form{
+
   display:flex;
+
   flex-direction:column;
+
   gap:15px;
 }
 
 input{
+
   padding:16px;
 
-  border:1px solid #333;
-
   border-radius:14px;
+
+  border:1px solid #333;
 
   background:#111;
 
@@ -112,72 +149,81 @@ input{
 }
 
 input:focus{
+
   outline:none;
 
-  border:1px solid #ff2f92;
+  border:1px solid #ff1493;
 
   box-shadow:
-  0 0 15px rgba(255,47,146,0.4);
+  0 0 16px rgba(255,20,147,0.4);
 }
 
+/* BUTTON */
+
 button{
+
   padding:16px;
 
   border:none;
 
   border-radius:14px;
 
-  background:#ff2f92;
+  background:#ff1493;
 
   color:white;
 
-  font-weight:bold;
-
   font-size:1rem;
+
+  font-weight:bold;
 
   cursor:pointer;
 
   transition:0.3s;
 
   box-shadow:
-  0 0 20px rgba(255,47,146,0.35);
+  0 0 20px rgba(255,20,147,0.35);
 }
 
 button:hover{
 
   transform:scale(1.04);
 
-  background:#ff4fa8;
+  background:#ff3aa3;
 
   box-shadow:
-  0 0 30px rgba(255,47,146,0.6);
+  0 0 35px rgba(255,20,147,0.6);
 }
+
+/* LIVE FEED */
 
 .feed-box{
 
   margin-top:40px;
 
-  background:rgba(15,15,15,0.95);
+  background:
+  rgba(15,15,15,0.95);
 
-  border:1px solid #ff2f92;
+  border:1px solid #ff1493;
 
   border-radius:22px;
 
-  padding:20px;
+  padding:22px;
 
   text-align:left;
 
   box-shadow:
-  0 0 20px rgba(255,47,146,0.2);
+  0 0 20px rgba(255,20,147,0.18);
 }
 
 .feed-title{
 
-  margin-bottom:15px;
+  margin-bottom:16px;
+
+  color:#ff1493;
 
   font-size:1.1rem;
 
-  color:#ff2f92;
+  letter-spacing:1px;
 }
 
 .feed-item{
@@ -186,13 +232,19 @@ button:hover{
 
   border-bottom:1px solid #222;
 
-  color:#ffd3e7;
+  color:#ffd6ea;
 }
 
+/* SHARE BUTTON */
+
 .share-btn{
+
   margin-top:25px;
+
   width:100%;
 }
+
+/* FOOTER */
 
 .footer{
 
@@ -200,12 +252,14 @@ button:hover{
 
   margin-bottom:30px;
 
-  color:#ff7ab8;
+  color:#ff8fc7;
 
   font-size:0.9rem;
 
   letter-spacing:2px;
 }
+
+/* MOBILE */
 
 @media(max-width:600px){
 
@@ -214,7 +268,7 @@ button:hover{
   }
 
   #counter{
-    font-size:2.3rem;
+    font-size:2.4rem;
   }
 
 }
@@ -228,63 +282,75 @@ button:hover{
 
 <div class="container">
 
-  <h1>CITY HUNTERS</h1>
+<h1>CITY HUNTERS</h1>
 
-  <p class="subtitle">
-    Sign the petition to bring the CITY HUNTERS world tour to your city.
-  </p>
+<p class="subtitle">
+Sign the petition to bring the
+CITY HUNTERS world tour
+to your city.
+</p>
 
-  <div class="counter-box">
+<!-- COUNTER -->
 
-    <div id="counter">
-      1,284,920
-    </div>
+<div class="counter-box">
 
-    <div class="counter-text">
-      Fans Have Signed
-    </div>
-
+  <div id="counter">
+    1,284,920
   </div>
 
-  <form id="petitionForm">
-
-    <input
-      type="text"
-      id="name"
-      placeholder="Your Name"
-      required
-    />
-
-    <input
-      type="text"
-      id="country"
-      placeholder="Your Country"
-      required
-    />
-
-    <button type="submit">
-      SIGN THE PETITION
-    </button>
-
-  </form>
-
-  <div class="feed-box">
-
-    <div class="feed-title">
-      LIVE ACTIVITY
-    </div>
-
-    <div id="feed"></div>
-
+  <div class="counter-text">
+    FANS HAVE SIGNED
   </div>
 
-  <button class="share-btn" id="shareBtn">
-    SHARE THIS PETITION
+</div>
+
+<!-- FORM -->
+
+<form id="petitionForm">
+
+  <input
+  type="text"
+  id="name"
+  placeholder="Your Name"
+  required>
+
+  <input
+  type="text"
+  id="country"
+  placeholder="Your Country"
+  required>
+
+  <button type="submit">
+    SIGN THE PETITION
   </button>
 
-  <div class="footer">
-    CITY HUNTERS WORLD MOVEMENT
+</form>
+
+<!-- LIVE FEED -->
+
+<div class="feed-box">
+
+  <div class="feed-title">
+    LIVE ACTIVITY
   </div>
+
+  <div id="feed"></div>
+
+</div>
+
+<!-- SHARE -->
+
+<button
+class="share-btn"
+id="shareBtn">
+
+SHARE THIS PETITION
+
+</button>
+
+<div class="footer">
+CITY HUNTERS WORLD MOVEMENT
+</div>
 
 </div>
 
@@ -304,91 +370,98 @@ document.getElementById("shareBtn");
 
 let count = 1284920;
 
-form.addEventListener("submit", function(e){
+/* SIGNING */
 
-  e.preventDefault();
+form.addEventListener("submit",
+function(e){
 
-  const name =
-  document.getElementById("name").value;
+e.preventDefault();
 
-  const country =
-  document.getElementById("country").value;
+const name =
+document.getElementById("name").value;
 
-  count++;
+const country =
+document.getElementById("country").value;
 
-  counter.innerText =
-  count.toLocaleString();
+count++;
 
-  const div =
-  document.createElement("div");
+counter.innerText =
+count.toLocaleString();
 
-  div.classList.add("feed-item");
+const div =
+document.createElement("div");
 
-  div.innerText =
-  `${name} from ${country} just signed.`;
+div.classList.add("feed-item");
 
+div.innerText =
+`${name} from ${country} just signed.`;
 
-  feed.prepend(div);
+feed.prepend(div);
 
-  form.reset();
+form.reset();
 
 });
 
+/* FAKE LIVE USERS */
+
 const fakePeople = [
 
-  ["Alex","Brazil"],
-  ["Maya","Kenya"],
-  ["Leo","France"],
-  ["Amina","Tanzania"],
-  ["Kai","Japan"],
-  ["David","USA"],
-  ["Sofia","Spain"],
-  ["Noah","Germany"],
-  ["Lina","South Korea"]
+["Alex","Brazil"],
+["Maya","Kenya"],
+["Leo","France"],
+["Amina","Tanzania"],
+["Kai","Japan"],
+["David","USA"],
+["Sofia","Spain"],
+["Noah","Germany"],
+["Lina","South Korea"]
 
 ];
 
 setInterval(() => {
 
-  const random =
+const random =
 
-  fakePeople[
-    Math.floor(
-      Math.random()
-      * fakePeople.length
-    )
-  ];
+fakePeople[
+Math.floor(
+Math.random()
+* fakePeople.length
+)
+];
 
-  count++;
+count++;
 
-  counter.innerText =
-  count.toLocaleString();
+counter.innerText =
+count.toLocaleString();
 
-  const div =
-  document.createElement("div");
+const div =
+document.createElement("div");
 
-  div.classList.add("feed-item");
+div.classList.add("feed-item");
 
-  div.innerText =
-  `${random[0]} from ${random[1]} just signed.`;
+div.innerText =
+`${random[0]} from ${random[1]} just signed.`;
 
-  feed.prepend(div);
+feed.prepend(div);
 
-  if(feed.children.length > 7){
+if(feed.children.length > 7){
 
-    feed.removeChild(feed.lastChild);
+feed.removeChild(feed.lastChild);
 
-  }
+}
 
 }, 4000);
 
-shareBtn.addEventListener("click", () => {
+/* SHARE BUTTON */
 
-  navigator.clipboard.writeText(
-    window.location.href
-  );
+shareBtn.addEventListener("click",
+() => {
 
-  alert("Petition link copied!");
+navigator.clipboard.writeText(
+window.location.href
+);
+
+alert("Petition link copied!");
 
 });
 
