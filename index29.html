@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>CITY HUNTERS Petition</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#050505;
+  color:white;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+.background{
+  position:fixed;
+  inset:0;
+
+  background:
+  radial-gradient(circle at top,
+  rgba(255,0,120,0.18),
+  #000 55%);
+
+  z-index:-1;
+}
+
+.container{
+  width:90%;
+  max-width:650px;
+  margin:auto;
+  padding-top:60px;
+  text-align:center;
+}
+
+h1{
+  font-size:3rem;
+  letter-spacing:3px;
+  margin-bottom:10px;
+
+  color:#ff2f92;
+
+  text-shadow:
+  0 0 10px #ff2f92,
+  0 0 30px #ff2f92;
+}
+
+.subtitle{
+  color:#ffb6d4;
+  margin-bottom:40px;
+  line-height:1.7;
+}
+
+.counter-box{
+  background:rgba(15,15,15,0.9);
+
+  border:1px solid #ff2f92;
+
+  padding:25px;
+  border-radius:22px;
+
+  margin-bottom:35px;
+
+  box-shadow:
+  0 0 20px rgba(255,47,146,0.3);
+}
+
+#counter{
+  font-size:3rem;
+  font-weight:bold;
+
+  color:#ff2f92;
+
+  text-shadow:
+  0 0 12px #ff2f92;
+}
+
+.counter-text{
+  color:#ffb6d4;
+  margin-top:8px;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input{
+  padding:16px;
+
+  border:1px solid #333;
+
+  border-radius:14px;
+
+  background:#111;
+
+  color:white;
+
+  font-size:1rem;
+
+  transition:0.3s;
+}
+
+input:focus{
+  outline:none;
+
+  border:1px solid #ff2f92;
+
+  box-shadow:
+  0 0 15px rgba(255,47,146,0.4);
+}
+
+button{
+  padding:16px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:#ff2f92;
+
+  color:white;
+
+  font-weight:bold;
+
+  font-size:1rem;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  box-shadow:
+  0 0 20px rgba(255,47,146,0.35);
+}
+
+button:hover{
+
+  transform:scale(1.04);
+
+  background:#ff4fa8;
+
+  box-shadow:
+  0 0 30px rgba(255,47,146,0.6);
+}
+
+.feed-box{
+
+  margin-top:40px;
+
+  background:rgba(15,15,15,0.95);
+
+  border:1px solid #ff2f92;
+
+  border-radius:22px;
+
+  padding:20px;
+
+  text-align:left;
+
+  box-shadow:
+  0 0 20px rgba(255,47,146,0.2);
+}
+
+.feed-title{
+
+  margin-bottom:15px;
+
+  font-size:1.1rem;
+
+  color:#ff2f92;
+}
+
+.feed-item{
+
+  padding:12px 0;
+
+  border-bottom:1px solid #222;
+
+  color:#ffd3e7;
+}
+
+.share-btn{
+  margin-top:25px;
+  width:100%;
+}
+
+.footer{
+
+  margin-top:40px;
+
+  margin-bottom:30px;
+
+  color:#ff7ab8;
+
+  font-size:0.9rem;
+
+  letter-spacing:2px;
+}
+
+@media(max-width:600px){
+
+  h1{
+    font-size:2.2rem;
+  }
+
+  #counter{
+    font-size:2.3rem;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+  <h1>CITY HUNTERS</h1>
+
+  <p class="subtitle">
+    Sign the petition to bring the CITY HUNTERS world tour to your city.
+  </p>
+
+  <div class="counter-box">
+
+    <div id="counter">
+      1,284,920
+    </div>
+
+    <div class="counter-text">
+      Fans Have Signed
+    </div>
+
+  </div>
+
+  <form id="petitionForm">
+
+    <input
+      type="text"
+      id="name"
+      placeholder="Your Name"
+      required
+    />
+
+    <input
+      type="text"
+      id="country"
+      placeholder="Your Country"
+      required
+    />
+
+    <button type="submit">
+      SIGN THE PETITION
+    </button>
+
+  </form>
+
+  <div class="feed-box">
+
+    <div class="feed-title">
+      LIVE ACTIVITY
+    </div>
+
+    <div id="feed"></div>
+
+  </div>
+
+  <button class="share-btn" id="shareBtn">
+    SHARE THIS PETITION
+  </button>
+
+  <div class="footer">
+    CITY HUNTERS WORLD MOVEMENT
+  </div>
+
+</div>
+
+<script>
+
+const form =
+document.getElementById("petitionForm");
+
+const counter =
+document.getElementById("counter");
+
+const feed =
+document.getElementById("feed");
+
+const shareBtn =
+document.getElementById("shareBtn");
+
+let count = 1284920;
+
+form.addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  const name =
+  document.getElementById("name").value;
+
+  const country =
+  document.getElementById("country").value;
+
+  count++;
+
+  counter.innerText =
+  count.toLocaleString();
+
+  const div =
+  document.createElement("div");
+
+  div.classList.add("feed-item");
+
+  div.innerText =
+  `${name} from ${country} just signed.`;
+
+
+  feed.prepend(div);
+
+  form.reset();
+
+});
+
+const fakePeople = [
+
+  ["Alex","Brazil"],
+  ["Maya","Kenya"],
+  ["Leo","France"],
+  ["Amina","Tanzania"],
+  ["Kai","Japan"],
+  ["David","USA"],
+  ["Sofia","Spain"],
+  ["Noah","Germany"],
+  ["Lina","South Korea"]
+
+];
+
+setInterval(() => {
+
+  const random =
+
+  fakePeople[
+    Math.floor(
+      Math.random()
+      * fakePeople.length
+    )
+  ];
+
+  count++;
+
+  counter.innerText =
+  count.toLocaleString();
+
+  const div =
+  document.createElement("div");
+
+  div.classList.add("feed-item");
+
+  div.innerText =
+  `${random[0]} from ${random[1]} just signed.`;
+
+  feed.prepend(div);
+
+  if(feed.children.length > 7){
+
+    feed.removeChild(feed.lastChild);
+
+  }
+
+}, 4000);
+
+shareBtn.addEventListener("click", () => {
+
+  navigator.clipboard.writeText(
+    window.location.href
+  );
+
+  alert("Petition link copied!");
+
+});
+
+</script>
+
+</body>
+</html>
