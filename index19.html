@@ -1,0 +1,213 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         LANDING / GIFT SECTION
+    =============================== -->
+
+    <input type="checkbox" id="open-gift">
+
+    <section class="gift-screen">
+
+        <div class="gift-wrapper">
+
+            <label for="open-gift" class="gift">
+
+                <!-- Gift Lid -->
+                <div class="gift-lid">
+                    <div class="ribbon ribbon-horizontal"></div>
+                </div>
+
+                <!-- Gift Box -->
+                <div class="gift-box">
+                    <div class="ribbon ribbon-vertical"></div>
+                </div>
+
+            </label>
+
+            <p class="click-text">Click to Open</p>
+
+            <div class="sparkles">
+                <span>✦</span>
+                <span>✧</span>
+                <span>✦</span>
+                <span>✧</span>
+                <span>✦</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         MAIN CONTENT
+    =============================== -->
+
+    <main class="main-content">
+
+        <div class="intro">
+            <p class="small-title">A little something for you</p>
+            <h1>Happy Birthday ❤️</h1>
+        </div>
+
+
+        <!-- ==============================
+             CAROUSEL
+        =============================== -->
+
+        <div class="carousel">
+
+            <!-- Navigation -->
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+
+
+            <!-- Slides -->
+
+            <div class="slides">
+
+                <!-- SLIDE 1 -->
+                <section class="slide slide-one">
+
+                    <div class="slide-content">
+
+                        <p class="eyebrow">A dream for us</p>
+
+                        <h2>Our Future Cottage</h2>
+
+                        <div class="cottage-image">
+                            <img src="images/cottage.jpg"
+                                 alt="Our future cottage">
+                        </div>
+
+                        <p class="caption">
+                            Somewhere peaceful, cozy, and ours. 🏡
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SLIDE 2 -->
+                <section class="slide slide-two">
+
+                    <div class="slide-content">
+
+                        <p class="eyebrow">A little soundtrack</p>
+
+                        <h2>A Cottage Playlist</h2>
+
+                        <div class="qr-container">
+
+                            <img src="images/qr-code.png"
+                                 alt="Playlist QR code">
+
+                        </div>
+
+                        <p class="scan-text">
+                            Scan to listen. 🎵
+                        </p>
+
+                        <p class="caption">
+                            Songs for slow mornings, sunset evenings,
+                            and everything in between.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SLIDE 3 -->
+                <section class="slide slide-three">
+
+                    <div class="slide-content">
+
+                        <p class="eyebrow">Made especially for you</p>
+
+                        <h2>Happy Birthday</h2>
+
+                        <div class="cards">
+
+                            <img src="images/card-front.jpg"
+                                 alt="Birthday card front">
+
+                            <img src="images/card-inside.jpg"
+                                 alt="Birthday card inside">
+
+                        </div>
+
+                        <p class="caption">
+                            With love, always. ❤️
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- Arrow Navigation -->
+
+            <div class="arrows">
+
+                <label for="slide3" class="arrow left arrow-one">
+                    ←
+                </label>
+
+                <label for="slide2" class="arrow right arrow-one">
+                    →
+                </label>
+
+
+                <label for="slide1" class="arrow left arrow-two">
+                    ←
+                </label>
+
+                <label for="slide3" class="arrow right arrow-two">
+                    →
+                </label>
+
+
+                <label for="slide2" class="arrow left arrow-three">
+                    ←
+                </label>
+
+                <label for="slide1" class="arrow right arrow-three">
+                    →
+                </label>
+
+            </div>
+
+
+            <!-- Dots -->
+
+            <div class="dots">
+
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
