@@ -1,12 +1,19 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Silla Agen Portfolio</title>
 
 <style>
+
+/* =========================================
+   GENERAL
+========================================= */
 
 *{
     margin:0;
@@ -23,7 +30,10 @@ body{
     padding:20px;
 }
 
-/* HEADER */
+
+/* =========================================
+   HEADER
+========================================= */
 
 h1{
     font-size:42px;
@@ -38,7 +48,10 @@ h1{
     font-size:18px;
 }
 
-/* PROFILE */
+
+/* =========================================
+   PROFILE
+========================================= */
 
 .profile{
     width:220px;
@@ -48,7 +61,10 @@ h1{
     box-shadow:0 14px 30px rgba(255,20,147,0.25);
 }
 
-/* INFO */
+
+/* =========================================
+   INFO
+========================================= */
 
 .info{
     margin-top:22px;
@@ -60,7 +76,10 @@ h1{
     color:#f5d0e6;
 }
 
-/* BIO */
+
+/* =========================================
+   BIO
+========================================= */
 
 .bio{
     max-width:760px;
@@ -74,7 +93,10 @@ h1{
     color:#f8ddea;
 }
 
-/* SKILLS */
+
+/* =========================================
+   SKILLS
+========================================= */
 
 .skills{
     margin:34px 0;
@@ -91,7 +113,10 @@ h1{
     box-shadow:0 6px 14px rgba(255,20,147,0.25);
 }
 
-/* BUTTON */
+
+/* =========================================
+   BUTTON
+========================================= */
 
 .btn{
     display:inline-block;
@@ -110,7 +135,10 @@ h1{
     box-shadow:0 12px 24px rgba(255,20,147,0.35);
 }
 
-/* PROJECTS */
+
+/* =========================================
+   PROJECTS
+========================================= */
 
 .projects{
     margin-top:70px;
@@ -156,14 +184,53 @@ h1{
     line-height:1.7;
 }
 
-/* FEATURED */
+
+/* =========================================
+   FEATURED PROJECT
+========================================= */
 
 .featured{
     border:2px solid #ff1493;
     background:linear-gradient(135deg,#111111,#1a0011);
 }
 
-/* COMING SOON */
+
+/* =========================================
+   BIRTHDAY PROJECT
+========================================= */
+
+.birthday-project{
+
+    background:
+        linear-gradient(
+            135deg,
+            #160008,
+            #300016,
+            #120008
+        );
+
+    border:2px solid #ff69b4;
+
+    box-shadow:
+        0 15px 40px rgba(255,20,147,0.18);
+}
+
+.birthday-project h3{
+    color:#ff8ac5;
+}
+
+.birthday-project p{
+    color:#f8ddea;
+}
+
+.birthday-btn{
+    background:#ff4fa3;
+}
+
+
+/* =========================================
+   COMING SOON
+========================================= */
 
 .coming-soon{
     background:linear-gradient(135deg,#000000,#2b001b);
@@ -175,7 +242,10 @@ h1{
     color:white;
 }
 
-/* FOOTER */
+
+/* =========================================
+   FOOTER
+========================================= */
 
 footer{
     margin-top:70px;
@@ -186,7 +256,10 @@ footer{
     border:1px solid rgba(255,105,180,0.2);
 }
 
-/* MOBILE */
+
+/* =========================================
+   MOBILE
+========================================= */
 
 @media(max-width:600px){
 
@@ -213,9 +286,16 @@ footer{
 }
 
 </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <h1>Silla Agen Mwakaje</h1>
 
@@ -223,141 +303,257 @@ footer{
 Builder • Developer • Engineer
 </p>
 
-<img src="silla.jpg" alt="Silla Photo" class="profile">
+
+<!-- PROFILE -->
+
+<img
+    src="silla.jpg"
+    alt="Silla Photo"
+    class="profile"
+>
+
+
+<!-- =========================================
+     PERSONAL INFORMATION
+========================================= -->
 
 <div class="info">
-    <p><strong>Age:</strong> 22</p>
-    <p><strong>Location:</strong> Dar es Salaam, Tanzania</p>
-    <p><strong>Profession:</strong> Mechatronics Engineering Student</p>
+
+    <p>
+        <strong>Age:</strong> 22
+    </p>
+
+    <p>
+        <strong>Location:</strong> Dar es Salaam, Tanzania
+    </p>
+
+    <p>
+        <strong>Profession:</strong> Mechatronics Engineering Student
+    </p>
+
 </div>
+
+
+<!-- =========================================
+     BIO
+========================================= -->
 
 <div class="bio">
+
     <p>
-        Welcome to my official portfolio. I enjoy building real-world digital projects,
-        exploring web development, and combining engineering creativity with technology.
-        This page highlights my growth, skills, and the work I continue to create.
+
+        Welcome to my official portfolio.
+        I enjoy building real-world digital projects,
+        exploring web development, and combining
+        engineering creativity with technology.
+
+        This page highlights my growth, skills,
+        and the work I continue to create.
+
     </p>
+
 </div>
 
+
+<!-- =========================================
+     SKILLS
+========================================= -->
+
 <div class="skills">
+
     <span>HTML</span>
     <span>CSS</span>
     <span>JavaScript</span>
     <span>Python</span>
     <span>Flask</span>
     <span>SQLite</span>
+
 </div>
 
+
+<!-- VIEW PROJECTS BUTTON -->
+
 <a href="#projects" class="btn">
-View My Projects
+    View My Projects
 </a>
+
+
+
+<!-- =========================================
+     PROJECT SECTION
+========================================= -->
 
 <div class="projects" id="projects">
 
     <h2>Featured Work</h2>
 
+
     <div class="project-grid">
 
-        <!-- MAIN PROJECT -->
+
+        <!-- =================================
+             PROJECT 1 — LIGHT IT UP
+        ================================== -->
 
         <div class="project-card featured">
 
-            <h3>🎧 LIGHT IT UP Studio</h3>
+            <h3>
+                🎧 LIGHT IT UP Studio
+            </h3>
 
             <p>
-                Premium music studio website with booking section,
-                image gallery, responsive design,
-                and bold futuristic branding.
+
+                Premium music studio website with
+                booking section, image gallery,
+                responsive design, and bold
+                futuristic branding.
+
             </p>
 
-            <a class="btn" href="light-it-up-studio/" target="_blank">
+            <a
+                class="btn"
+                href="light-it-up-studio/"
+                target="_blank"
+            >
                 Open Project
             </a>
 
         </div>
 
-        <!-- SECOND PROJECT -->
+
+
+        <!-- =================================
+             PROJECT 2 — MARKET
+        ================================== -->
 
         <div class="project-card">
 
-            <h3>🛒 Sillar</h3>
+            <h3>
+                🛒 Sillar Market
+            </h3>
 
             <p>
+
                 Shop smarter, compare prices,
-                and save more with a modern online experience.
+                and save more with a modern
+                online shopping experience.
+
             </p>
 
-            <a class="btn" href="online-shopping/" target="_blank">
+            <a
+                class="btn"
+                href="online-shopping/"
+                target="_blank"
+            >
                 Open Project
             </a>
 
         </div>
 
-        <!-- PETITION PROJECT -->
+
+
+        <!-- =================================
+             PROJECT 3 — FAN PETITION
+        ================================== -->
 
         <div class="project-card">
 
-            <h3>🖊️ Fan Petition Platform</h3>
+            <h3>
+                🖊️ Fan Petition Platform
+            </h3>
 
             <p>
-                Interactive petition-style platform where supporters
-                can sign and engage with music campaign events.
+
+                Interactive petition-style platform
+                where supporters can sign and engage
+                with music campaign events.
+
             </p>
 
-            <a class="btn" href="fan-petition/" target="_blank">
+            <a
+                class="btn"
+                href="fan-petition/"
+                target="_blank"
+            >
                 Open Project
             </a>
 
         </div>
 
 
-    <!-- DIGITAL BIRTHDAY GIFT PROJECT -->
-     <div class="project-card">
 
-      <div class="project-info">
+        <!-- =================================
+             PROJECT 4 — DIGITAL BIRTHDAY GIFT
+        ================================== -->
 
-        <span class="project-category">
-            HTML • CSS • Web Design
-        </span>
+        <div class="project-card birthday-project">
 
-        <h3>Digital Birthday Gift</h3>
+            <h3>
+                🎁 Digital Birthday Gift
+            </h3>
 
-        <p>
-            A warm and romantic interactive birthday gift website
-            featuring a CSS animated gift box, smooth transitions,
-            a cottage gallery, playlist QR code, and responsive
-            birthday-card presentation.
-        </p>
+            <p>
 
-        <a href="projects/birthday-gift/index.html" class="project-link">
-            View Project →
-        </a>
+                A romantic interactive birthday
+                experience featuring a CSS animated
+                gift box, cottage gallery, playlist
+                QR code, and birthday cards.
 
-    </div>
+            </p>
 
-</div>
+            <a
+                class="btn birthday-btn"
+                href="birthday-gift/"
+                target="_blank"
+            >
+                Open Project
+            </a>
 
-       <!-- FUTURE PROJECT -->
+        </div>
+
+
+
+        <!-- =================================
+             FUTURE PROJECT
+        ================================== -->
 
         <div class="project-card coming-soon">
 
-            <h3>🚀 New Project Loading</h3>
+            <h3>
+                🚀 New Project Loading
+            </h3>
 
             <p>
+
                 More advanced web experiences,
-                tools, and innovations
-                will be added here soon.
+                tools, and innovations will be
+                added here soon.
+
             </p>
 
         </div>
+
 
     </div>
 
 </div>
 
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
 <footer>
-    <p>©️ 2026 Silla Agen Portfolio</p>
+
+    <p>
+        ©️ 2026 Silla Agen Portfolio
+    </p>
+
 </footer>
 
+
 </body>
+
 </html>
+```
